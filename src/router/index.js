@@ -13,6 +13,11 @@ export default new Router({
             component: Layout,
         },
         {
+            path: '/customs',
+            name: 'Customs',
+            component: Layout,
+        },
+        {
             path: '/information',
             component: Layout,
             children: [
