@@ -11,10 +11,12 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "lintfix": "eslint -c .eslintrc . --fix",
+    "lintfix": "eslint -c .eslintrc.js . --fix",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.0-rc.19",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-sidebar-menu": "^3.7.1"
