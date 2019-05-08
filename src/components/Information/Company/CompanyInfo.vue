@@ -150,16 +150,17 @@ export default {
                 title: '',
                 content: '',
             },
-        }
+        };
     },
     computed: {
         sortOptions() {
         // Create an options list from our fields
-            return this.fields
-                .filter(f => f.sortable)
-                .map(f => {
-                    return { text: f.label, value: f.key }
-                });
+            return this.fields.filter(f => (f.sortable)).map(f => { 
+              return {
+                  text: f.label,
+                  value: f.key,
+            };
+            });
         },
     },
     mounted() {
@@ -168,7 +169,7 @@ export default {
     },
     methods: {
         info(item, index, button) {
-            this.infoModal.title = 'Row index: ${index}';
+            this.infoModal.title = `Row index: ${index}`;
             this.infoModal.content = JSON.stringify(item, null, 2);
             this.$root.$emit('bv::show::modal', this.infoModal.id, button);
         },

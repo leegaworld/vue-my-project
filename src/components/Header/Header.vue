@@ -27,6 +27,6 @@ export default {
         return {
             email: 'leegaworld@gmail.com',
         }
-    }
+    },
 };
 </script>
