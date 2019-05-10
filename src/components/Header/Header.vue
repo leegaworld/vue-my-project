@@ -6,7 +6,7 @@
                 <b-navbar-nav>
                     <b-nav-item href="#">{{ email }}</b-nav-item>
                     <b-nav-item router-link to="/information/company">Company Information</b-nav-item>
-                    <b-nav-item href="#">My Page</b-nav-item>
+                    <b-nav-item router-link to="/information/mypage">My Page</b-nav-item>
                     <b-nav-item href="#">Log Out</b-nav-item>
 
                     <!-- Navbar dropdowns -->
@@ -22,11 +22,11 @@
 
 <script>
 export default {
-    name: 'Header',
-    data() {
-        return {
-            email: 'leegaworld@gmail.com',
-        }
-    },
+  name: 'Header',
+  data() {
+    return {
+      email: 'leegaworld@gmail.com',
+    };
+  },
 };
 </script>

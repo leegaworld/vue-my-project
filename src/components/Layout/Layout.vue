@@ -28,100 +28,100 @@
 import Header from '../Header/Header';
 
 const separator = {
-    template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
+  template: '<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">',
 };
 
 export default {
-    name: 'Layout',
-    components: {
-        Header,
-    },
-    data() {
-        return {
-            menu: [
-                {
-                    header: true,
-                    title: 'Case Intelligence System',
-                },
-                {
-                    header: true,
-                    component: separator,
-                    visibleOnCollapse: true,
-                },
-                {
-                    href: '/dashboard',
-                    title: 'Dashboard',
-                    icon: 'fa fa-download',
-                    disabled: false,
-                },
-                {
-                    href: '/online',
-                    title: 'Online',
-                    icon: 'fa fa-code',
-                    disabled: true,
-                },
-                {
-                    href: '/customs',
-                    title: 'Customs',
-                    icon: 'fa fa-list-ul',
-                    child: [
-                        {
-                            href: '/customs/recordal',
-                            title: 'Recordal Status',
-                            icon: 'fa fa-file-alt',
-                        },
-                        {
-                            href: '/customs/training',
-                            title: 'Training',
-                            icon: 'fa fa-file-alt',
-                        },
-                        {
-                            href: '/customs/case',
-                            title: 'Case',
-                            icon: 'fa fa-file-alt',
-                        },
-                        {
-                            href: '/customs/intelligence',
-                            title: 'Intelligence',
-                            icon: 'fa fa-file-alt',
-                        },
-                    ],
-                },
-                {
-                    href: '/market',
-                    title: 'Market',
-                    icon: 'fa fa-code',
-                    disabled: true,
-                },
-                {
-                    href: '/legal',
-                    title: 'Legal',
-                    icon: 'fa fa-code',
-                    disabled: true,
-                },
-                {
-                    href: '/intelligence',
-                    title: 'Intelligence',
-                    icon: 'fa fa-code',
-                    disabled: true,
-                },
-            ],
-            collapsed: false,
-            themes: ['', 'white-theme'],
-            selectedTheme: '',
-        };
-    },
-    methods: {
-        onCollapse(collapsed) {
-            console.log(collapsed);
-            this.collapsed = collapsed;
+  name: 'Layout',
+  components: {
+    Header,
+  },
+  data() {
+    return {
+      menu: [
+        {
+          header: true,
+          title: 'Case Intelligence System',
         },
-        onItemClick(event, item) {
-            console.log('onItemClick -> event: %s, item: %s', event, item);
-            // console.log(event)
-            // console.log(item)
+        {
+          header: true,
+          component: separator,
+          visibleOnCollapse: true,
         },
+        {
+          href: '/dashboard',
+          title: 'Dashboard',
+          icon: 'fa fa-download',
+          disabled: false,
+        },
+        {
+          href: '/online',
+          title: 'Online',
+          icon: 'fa fa-code',
+          disabled: true,
+        },
+        {
+          href: '/customs',
+          title: 'Customs',
+          icon: 'fa fa-list-ul',
+          child: [
+            {
+              href: '/customs/recordal',
+              title: 'Recordal Status',
+              icon: 'fa fa-file-alt',
+            },
+            {
+              href: '/customs/training',
+              title: 'Training',
+              icon: 'fa fa-file-alt',
+            },
+            {
+              href: '/customs/case',
+              title: 'Case',
+              icon: 'fa fa-file-alt',
+            },
+            {
+              href: '/customs/intelligence',
+              title: 'Intelligence',
+              icon: 'fa fa-file-alt',
+            },
+          ],
+        },
+        {
+          href: '/market',
+          title: 'Market',
+          icon: 'fa fa-code',
+          disabled: true,
+        },
+        {
+          href: '/legal',
+          title: 'Legal',
+          icon: 'fa fa-code',
+          disabled: true,
+        },
+        {
+          href: '/intelligence',
+          title: 'Intelligence',
+          icon: 'fa fa-code',
+          disabled: true,
+        },
+      ],
+      collapsed: false,
+      themes: ['', 'white-theme'],
+      selectedTheme: '',
+    };
+  },
+  methods: {
+    onCollapse(collapsed) {
+      console.log(collapsed);
+      this.collapsed = collapsed;
     },
+    onItemClick(event, item) {
+      console.log('onItemClick -> event: %s, item: %s', event, item);
+      // console.log(event)
+      // console.log(item)
+    },
+  },
 };
 </script>
 
@@ -158,21 +158,21 @@ pre {
 }
 
 .footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:70px;
-    background:#343a40;
-    text-align: center;
-    clear: left;
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:70px;
+  background:#343a40;
+  text-align: center;
+  clear: left;
 }
 
 .header-font {
-    font-style:italic;
-    font-weight:bold;
-    font-family:arial;
-    font-size:1.0em;
-    color:white;
+  font-style:italic;
+  font-weight:bold;
+  font-family:arial;
+  font-size:1.0em;
+  color:white;
 }
 
 </style>

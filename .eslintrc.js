@@ -31,10 +31,15 @@ module.exports = {
     'no-console': [
       'warn'
     ],
-    'indent': [ 'error', 4 ],
+    'indent': [ 'error', 2 ],
     'max-len': 0,
     'global-require': 0,
     'no-shadow': 0,
+    'no-unused-vars': [
+      'warn'
+    ],
+    'no-plusplus': 0,
+    'arrow-body-style': 0,
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',

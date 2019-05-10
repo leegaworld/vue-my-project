@@ -2,31 +2,37 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Layout from '@/components/Layout/Layout';
 import CompanyInfo from '@/components/Information/Company/CompanyInfo';
+import FilteredTableDisplay from '@/components/Tests/FilteredTableDisplay';
 
 Vue.use(Router);
 
 export default new Router({
-    routes: [
+  routes: [
+    {
+      path: '/',
+      name: 'Layout',
+      component: Layout,
+    },
+    {
+      path: '/customs',
+      name: 'Customs',
+      component: Layout,
+    },
+    {
+      path: '/information',
+      component: Layout,
+      children: [
         {
-            path: '/',
-            name: 'Layout',
-            component: Layout,
+          path: 'company',
+          name: 'CompanyInfo',
+          component: CompanyInfo,
         },
         {
-            path: '/customs',
-            name: 'Customs',
-            component: Layout,
+          path: 'mypage',
+          name: 'MyPage',
+          component: FilteredTableDisplay,
         },
-        {
-            path: '/information',
-            component: Layout,
-            children: [
-                {
-                    path: 'company',
-                    name: 'companyInfo',
-                    component: CompanyInfo,
-                },
-            ],
-        },
-    ],
+      ],
+    },
+  ],
 });

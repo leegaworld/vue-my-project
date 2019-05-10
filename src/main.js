@@ -23,6 +23,9 @@ import Modal from 'bootstrap-vue/es/components/modal';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
+import FieldFormatter from './Plugins/FieldFormatter/FieldFormatter';
+import AlertModal from './Plugins/AlertModal/AlertModal';
+
 Vue.config.productionTip = true;
 
 Vue.use(VueSidebarMenu);
@@ -40,10 +43,16 @@ Vue.use(FormSelect);
 Vue.use(Pagination);
 Vue.use(Modal);
 
+Vue.use(FieldFormatter, {
+  opt1: true,
+});
+
+Vue.use(AlertModal);
+
 /* eslint-disable no-new */
 new Vue({
-    el: '#app',
-    router,
-    components: { App },
-    template: '<App/>',
+  el: '#app',
+  router,
+  components: { App },
+  template: '<App/>',
 });
