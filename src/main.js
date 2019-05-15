@@ -3,6 +3,13 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import VueSession from 'vue-session';
+import VueCookies from 'vue-cookies';
+import cookie from 'cookie';
+import VueCsrf from 'vue-csrf';
+
 
 import VueSidebarMenu from 'vue-sidebar-menu';
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css';
@@ -27,6 +34,11 @@ import FieldFormatter from './Plugins/FieldFormatter/FieldFormatter';
 import AlertModal from './Plugins/AlertModal/AlertModal';
 
 Vue.config.productionTip = true;
+
+Vue.use(VueAxios, axios);
+Vue.use(cookie, VueCookies, VueSession);
+
+Vue.use(VueCsrf);
 
 Vue.use(VueSidebarMenu);
 

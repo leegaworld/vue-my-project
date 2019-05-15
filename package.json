@@ -18,8 +18,13 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.19",
+    "cookie": "^0.3.1",
     "vue": "^2.5.2",
+    "vue-axios": "^2.1.4",
+    "vue-cookies": "^1.5.13",
+    "vue-csrf": "^1.1.0",
     "vue-router": "^3.0.1",
+    "vue-session": "^1.0.0",
     "vue-sidebar-menu": "^3.7.1",
     "vuex": "^3.1.1"
   },

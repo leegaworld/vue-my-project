@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import Login from '@/components/Login/Login';
 import Layout from '@/components/Layout/Layout';
 import CompanyInfo from '@/components/Information/Company/CompanyInfo';
 import FilteredTableDisplay from '@/components/Tests/FilteredTableDisplay';
@@ -7,11 +8,13 @@ import FilteredTableDisplay from '@/components/Tests/FilteredTableDisplay';
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
-      path: '/',
-      name: 'Layout',
-      component: Layout,
+      path: '/login/:token',
+      name: 'Login',
+      component: Login,
+      props: token,
     },
     {
       path: '/customs',
